@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    font-family: "Volkorn", Georgia, sans-serif;
+}
+
 li {
     list-style-type: none;
 }
