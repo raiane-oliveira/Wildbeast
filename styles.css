@@ -231,18 +231,21 @@ p {
 
 .characteristics-main-content div {
     width: 80px;
-    text-align: center;
+    height: 100px;
     background: linear-gradient(135deg, #8844ee, #b07dfb);
     border-radius: 5px;
     box-shadow: 5px 5px 15px rgba(44, 44, 44, 0.15);
     position: relative;
+    text-align: center;
 }
 
 .number-characteristics {
     color: #b07dfb;
     font-size: 3rem;
     line-height: 1;
-    margin: 10px auto;
+    padding-top: 15px 0;
+    position: relative;
+    top: 5px;
 }
 
 .label-characteristics {
@@ -252,7 +255,7 @@ p {
     border-radius: 0 0 5px 5px;
     padding: 5px 0;
     position: relative;
-    top: 2px;
+    top: 24px;
 }
 
 .highlight-main-content {
