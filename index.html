@@ -25,12 +25,20 @@
                     <img src="img/wildbeast.svg" alt="Wildbeast logo" />
                 </a>
                 <nav>
-                    <ul>
+                    <ul id="menu" role="menu">
                         <li><a href="#">Sobre</a></li>
                         <li><a href="#">Animais</a></li>
                         <li><a href="#">Contato</a></li>
                     </ul>
                 </nav>
+                <button
+                    aria-label="Abrir menu"
+                    aria-haspopup="true"
+                    aria-controls="menu"
+                    class="menu-hamburger"
+                >
+                    <span class="trace-menu-hamburger"></span>
+                </button>
             </header>
 
             <nav class="sidenav">
@@ -172,5 +180,8 @@
                 <p>Raiane Oliveira © 2023. Todos os direitos reservados.</p>
             </footer>
         </article>
+
+        <!-- JS -->
+        <script src="index.js"></script>
     </body>
 </html>
