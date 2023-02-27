@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: "Vollkorn", Georgia, sans-serif;
+    font-family: "Volkorn", Georgia, sans-serif;
 }
 
 li {
@@ -29,6 +29,28 @@ img {
         "header header header"
         "sidenav content ads"
         "footer footer footer";
+}
+
+@media (max-width: 1200px) {
+    .main-container {
+        grid-template-areas:
+            "header header header"
+            "sidenav content content"
+            "sidenav ads ads"
+            "footer footer footer";
+    }
+}
+
+@media (max-width: 760px) {
+    .main-container {
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "header"
+            "sidenav"
+            "content"
+            "ads"
+            "footer";
+    }
 }
 
 /* Header */
@@ -66,6 +88,21 @@ img {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 760px) {
+    .header {
+        grid-template-columns: auto;
+    }
+    .logo {
+        margin-bottom: 20px;
+    }
+    .header nav a {
+        font-size: 1rem;
+    }
+    .header nav ul {
+        gap: 10px;
+    }
+}
+
 /* Sidenav */
 
 .sidenav {
@@ -88,6 +125,40 @@ img {
 
 .sidenav li a:hover {
     background-color: #b07dfb;
+}
+
+@keyframes arrow {
+    from {
+        right: 30px;
+    }
+    to {
+        right: 20px;
+    }
+}
+
+@media (max-width: 760px) {
+    .sidenav {
+        overflow-x: auto;
+        padding: 0 30px;
+        position: relative;
+    }
+    .sidenav::after {
+        content: "→";
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        color: rgba(0, 0, 0, 0.3);
+        animation: arrow 0.5s ease-in infinite alternate;
+    }
+    .sidenav ul {
+        display: flex;
+    }
+    .sidenav li {
+        flex: 1 0 60px;
+    }
+    .sidenav li a {
+        margin: 30px 30px 30px 0;
+    }
 }
 
 /* Main content */
@@ -117,7 +188,7 @@ img {
 }
 
 /* Geral styles main content */
-.main-content p {
+p {
     font-size: 1.2rem;
     line-height: 1.6;
     letter-spacing: -0.005em;
@@ -233,7 +304,10 @@ img {
 .footer {
     grid-area: footer;
     background: linear-gradient(135deg, #8844ee, #b07dfb);
+    padding: 30px;
+}
+
+.footer p {
     color: white;
     text-align: center;
-    padding: 30px;
 }
