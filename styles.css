@@ -90,9 +90,91 @@ img {
     background-color: #b07dfb;
 }
 
+/* Main content */
+
 .main-content {
     grid-area: content;
-    background-color: #fafbfc;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.col-wide {
+    grid-column: 1 / -1;
+}
+
+.img-wolf1-main-content {
+    grid-row: span 2;
+    align-self: end;
+}
+
+.img-wolf2-main-content {
+    align-self: end;
+}
+
+/* Geral styles main content */
+.main-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.info-wolf-main-content p + p {
+    margin-top: 30px;
+}
+
+/* Title main content */
+.title-main-content {
+    color: #b07dfb;
+}
+
+.title-main-content h1 {
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.title-main-content span {
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+/* Characteristics main content */
+.characteristics-main-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.characteristics-main-content div {
+    width: 80px;
+    text-align: center;
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(44, 44, 44, 0.15);
+    position: relative;
+}
+
+.number-characteristics {
+    color: #b07dfb;
+    font-size: 3rem;
+    line-height: 1;
+    margin: 10px auto;
+}
+
+.label-characteristics {
+    display: block;
+    color: #b07dfb;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0;
+    position: relative;
+    top: 2px;
 }
 
 /* ADs */
