@@ -15,6 +15,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* Grid geral */
 .main-container {
     display: grid;
@@ -25,8 +29,39 @@ a {
         "footer footer footer";
 }
 
+/* Header */
+
 .header {
     grid-area: header;
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.logo {
+    max-width: 200px;
+}
+
+.header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header nav a {
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 1.125rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: 0.1s;
+}
+
+.header nav a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .sidenav {
