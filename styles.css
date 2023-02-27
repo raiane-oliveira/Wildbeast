@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: "Volkorn", Georgia, sans-serif;
+    font-family: "Vollkorn", Georgia, sans-serif;
 }
 
 li {
@@ -13,4 +13,34 @@ li {
 
 a {
     text-decoration: none;
+}
+
+/* Grid geral */
+.main-container {
+    display: grid;
+    grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+    grid-template-areas:
+        "header header header"
+        "sidenav content ads"
+        "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidenav {
+    grid-area: sidenav;
+}
+
+.main-content {
+    grid-area: content;
+}
+
+.ads {
+    grid-area: ads;
+}
+
+.footer {
+    grid-area: footer;
 }
