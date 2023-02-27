@@ -64,8 +64,28 @@ img {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Sidenav */
+
 .sidenav {
     grid-area: sidenav;
+    background-color: #fafbfc;
+    padding: 30px;
+}
+
+.sidenav li a {
+    display: block;
+    min-width: 60px;
+    max-width: 100px;
+    margin: 0 auto 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(44, 44, 44, 0.15);
+    transition: 0.1s ease-out;
+}
+
+.sidenav li a:hover {
+    background-color: #b07dfb;
 }
 
 .main-content {
