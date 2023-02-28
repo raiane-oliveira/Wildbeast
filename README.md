@@ -16,7 +16,7 @@ Fiz algumas alterações próprias nele, como adicionar a animação de scroll e
 
 ## 📒 Aprendizados
 
--   Novas técnicas de responsivadade sem `media-queries`
+-   Novas técnicas de responsivadade sem `media-queries`, como `repeat(auto-fit, minmax(value, auto))`
 -   Imagens responsivas usando `max-width` e `width: 100%`
 -   Animação de Scroll
 -   Menu toggle acessível com atributos `aria-label`, `aria-haspopup`, `role="menu"`, `aria-expanded` e `aria-controls`
