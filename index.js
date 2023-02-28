@@ -1,24 +1,24 @@
 // Responsive menu
-let show = true;
+let showMenuToggle = true;
 
-const menuHamburger = document.querySelector(".menu-hamburger");
+const menuToggle = document.querySelector(".menu-toggle");
 const navHeader = document.querySelector(".header nav");
 
-menuHamburger.addEventListener("click", toggleMenu);
-menuHamburger.addEventListener("touchstart", toggleMenu);
+menuToggle.addEventListener("click", toggleMenu);
+menuToggle.addEventListener("touchstart", toggleMenu);
 
 function toggleMenu(event) {
     if (event.type === "touchstart") event.preventDefault();
 
-    document.body.style.overflow = show ? "hidden" : "initial";
-    navHeader.classList.toggle("active-menu-burger", show);
-    show = !show;
+    document.body.style.overflow = showMenuToggle ? "hidden" : "initial";
 
-    const isMenuBurgerActive =
-        navHeader.classList.contains("active-menu-burger");
+    navHeader.classList.toggle("menu-toggle-opened", showMenuToggle);
+    showMenuToggle = !showMenuToggle;
 
-    event.currentTarget.setAttribute("aria-expanded", isMenuBurgerActive);
-    if (isMenuBurgerActive)
+    let isMenuActive = navHeader.classList.contains("menu-toggle-opened");
+
+    event.currentTarget.setAttribute("aria-expanded", isMenuActive);
+    if (isMenuActive)
         event.currentTarget.setAttribute("aria-label", "Fechar menu");
     else event.currentTarget.setAttribute("aria-label", "Abrir menu");
 }

@@ -89,68 +89,69 @@ img {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.menu-hamburger {
+/* Menu toggle */
+.menu-toggle {
     display: none;
 }
 
+.menu-traces {
+    background-color: #fafbfc;
+    height: 3px;
+    width: 100%;
+    transition: 0.5s;
+    margin-bottom: 6px;
+}
+
 @media (max-width: 760px) {
-    .header nav {
-        position: absolute;
-        width: 100%;
-        height: 0px;
-        top: 93px;
-        right: 0;
-        z-index: 1000;
-        background: linear-gradient(135deg, #8844ee, #b07dfb);
-        visibility: hidden;
-        transition: 0.6s ease-in-out;
-        overflow: hidden;
-    }
     .header nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    /* Menu toggle opened */
+    .header nav.menu-toggle-opened {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(135deg, #8844ee, #b07dfb);
+
+        width: 100vw;
+        height: 100vh;
+
+        z-index: 10000;
+    }
+
+    .header nav.menu-toggle-opened ul {
+        display: flex;
         flex-direction: column;
+        position: relative;
+        top: 100px;
         margin: 30px;
         text-align: center;
     }
-    .header nav ul.active-menu-burger {
-        height: 100vh;
-        visibility: visible;
-        overflow: auto;
-    }
-    .menu-hamburger {
-        display: flex;
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        border: none;
-        background: transparent;
-        cursor: pointer;
-        gap: 1rem;
-    }
-    .trace-menu-hamburger {
-        display: block;
-        width: 24px;
-        border-top: 2px solid;
-    }
-    .trace-menu-hamburger::after,
-    .trace-menu-hamburger::before {
-        content: "";
-        display: block;
-        width: 24px;
-        height: 2px;
-        margin-top: 3px;
-        background-color: currentColor;
-        transition: 0.6s;
-        position: relative;
+
+    .header nav.menu-toggle-opened .menu-toggle {
+        position: absolute;
+        top: 35px;
+        right: 35px;
     }
 
-    .header nav.active-menu-burger .trace-menu-hamburger {
-        border-top-color: transparent;
+    nav.menu-toggle-opened .first-trace {
+        transform: rotate(45deg) translate(4px, 9px);
     }
-    .header nav.active-menu-burger .trace-menu-hamburger::before {
-        transform: rotate(135deg);
+
+    nav.menu-toggle-opened .second-trace {
+        opacity: 0;
     }
-    .header nav.active-menu-burger .trace-menu-hamburger::after {
-        transform: rotate(-135deg);
-        top: -5px;
+
+    nav.menu-toggle-opened .third-trace {
+        transform: rotate(-45deg) translate(3px, -9px);
     }
 }
 
