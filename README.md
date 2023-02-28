@@ -6,7 +6,7 @@ Site estático e responsivo, que possui animações nas seções ao rolar a pág
 
 Esse foi um projeto desenvolvido no curso de [CSS Grid Layout](https://www.youtube.com/watch?v=hKXOVD2Yrj8&list=PLfORcUvCoARds61Iz0qWNuhCc7rskYefJ&index=1) 
 do [Origamid](https://www.youtube.com/Origamid).
-Fiz algumas alterações próprias nele, como adicionar a animação de scroll e o menu toggle no mobile para deixar o projeto mais interessante.
+Fiz algumas alterações próprias nele, como adicionar a animação de scroll e o menu toggle no mobile para deixar o site mais interessante.
 
 ## 🚀 Techs
 
