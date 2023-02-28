@@ -138,8 +138,8 @@ img {
 
     .header nav.menu-toggle-opened .menu-toggle {
         position: absolute;
-        top: 35px;
-        right: 35px;
+        top: 36px;
+        right: 31px;
     }
 
     nav.menu-toggle-opened .first-trace {
@@ -372,4 +372,23 @@ p {
 .footer p {
     color: white;
     text-align: center;
+}
+
+/* Animation sections */
+[data-animate] {
+    opacity: 0;
+    transition: 1s;
+}
+
+[data-animate="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-animate="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-animate].active-animation {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
